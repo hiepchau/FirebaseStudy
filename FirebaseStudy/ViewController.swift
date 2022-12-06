@@ -61,6 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let imageData = image.pngData() else{
             return
         }
+        
         let pathRef = storage.child("images/file.png")
         pathRef.putData(imageData, metadata: nil, completion: { _, error in
             guard error == nil else{
